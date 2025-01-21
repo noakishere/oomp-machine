@@ -7,6 +7,7 @@ let randomBtn = document.querySelector("#btn");
 async function loadRNBO() {
 	[device, context] = await createRNBODevice(patchExportURL);
 	console.log("RNBO Device Loaded");
+	console.log(device);
 }
 
 loadRNBO();
