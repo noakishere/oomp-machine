@@ -1,6 +1,6 @@
 [
 	{
 		"id": "newDrumKick",
-		"file": "export/media/kick.wav"
+		"file": "./export/media/kick.wav"
 	}
 ]

@@ -62,7 +62,7 @@ async function createRNBODevice(patchExportURL) {
 
 	attachOutports(device);
 
-	let dependencies = await fetch("export/dependencies.json");
+	let dependencies = await fetch("./export/dependencies.json");
 	dependencies = await dependencies.json();
 
 	// Load the dependencies into the device
