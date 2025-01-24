@@ -62,6 +62,19 @@ async function createRNBODevice(patchExportURL) {
 
 	attachOutports(device);
 
+	let dependencies = await fetch("export/dependencies.json");
+	dependencies = await dependencies.json();
+
+	// Load the dependencies into the device
+	const results = await device.loadDataBufferDependencies(dependencies);
+	results.forEach((result) => {
+		if (result.type === "success") {
+			console.log(`Successfully loaded buffer with id ${result.id}`);
+		} else {
+			console.log(`Failed to load buffer with id ${result.id}, ${result.error}`);
+		}
+	});
+
 	// console.log(`DEVICEEEE ${device.messagePort}`);
 
 	return [device, context];

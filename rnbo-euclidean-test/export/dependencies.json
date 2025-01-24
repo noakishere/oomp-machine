@@ -1,6 +1,6 @@
 [
-  {
-    "id": "drumKick",
-    "url": "https://freewavesamples.com/files/Ouch-3.wav"
-  }
+	{
+		"id": "newDrumKick",
+		"file": "export/media/kick.wav"
+	}
 ]
