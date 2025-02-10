@@ -2,5 +2,13 @@
 	{
 		"id": "newDrumKick",
 		"file": "./export/media/kick.wav"
+	},
+	{
+		"id": "newSnare",
+		"file": "./export/media/snare.wav"
+	},
+	{
+		"id": "newHihat",
+		"file": "./export/media/hihat.wav"
 	}
 ]
