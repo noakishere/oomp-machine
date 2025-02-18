@@ -213,13 +213,13 @@ sequencer2GainDOM.addEventListener("input", () => {
 });
 
 seq2ReverbSize.addEventListener("input", () => {
-	sequencer2GainLabel.innerHTML = `Reverb: ${sequencer2GainDOM.value}`;
-	sendMessageToInport(device, "reverb-power", sequencer2GainDOM.value);
+	seq2reverbSizeLabel.innerHTML = `Reverb: ${sequencer2GainDOM.value}`;
+	sendMessageToInport(device, "reverb-power", seq2ReverbSize.value);
 });
 
 decay2DOM.addEventListener("input", () => {
-	sequencer2GainLabel.innerHTML = `Decay: ${sequencer2GainDOM.value}`;
-	sendMessageToInport(device, "reverbMultiplier", sequencer2GainDOM.value);
+	decay2Label.innerHTML = `Decay: ${sequencer2GainDOM.value}`;
+	sendMessageToInport(device, "reverbMultiplier", decay2DOM.value);
 });
 
 // PATTERNS
