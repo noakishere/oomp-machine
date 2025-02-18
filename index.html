@@ -3,10 +3,283 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>RNBO Web Export - Test</title>
+		<title>Euclidean Kick</title>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<button id="btn">Press me</button>
+		<div class="container">
+			<!-- Row 0: Master Volume -->
+			<div class="row master-volume">
+				<fieldset class="master">
+					<legend>Master Volume</legend>
+					<div class="slider-container">
+						<div class="slider-group">
+							<label id="masterVolumeLabel" for="masterVolume">Volume</label>
+							<input type="range" id="masterVolume" min="0" max="100" value="75" />
+						</div>
+					</div>
+				</fieldset>
+			</div>
+
+			<!-- Row 1: Drum Controls -->
+			<div class="row drum-controls">
+				<fieldset class="drum">
+					<legend>Kick</legend>
+					<div class="slider-container">
+						<div class="slider-group">
+							<label id="kickGainLabel" for="kickGain">Gain</label>
+							<input type="range" id="kickGain" min="0" max="200" value="8" />
+						</div>
+						<div class="slider-group">
+							<label id="kickStepsLabel" for="kickSteps">Steps</label>
+							<input type="range" id="kickSteps" min="0" max="50" value="8" />
+						</div>
+						<div class="slider-group">
+							<label id="kickPulsesLabel" for="kickPulses">Pulses</label>
+							<input type="range" id="kickPulses" min="0" max="50" value="1" />
+						</div>
+						<div class="slider-group">
+							<label id="kickRotatesLabel" for="kickRotates">Rotate</label>
+							<input type="range" id="kickRotates" min="0" max="50" value="0" />
+						</div>
+					</div>
+					<!-- Pattern container placed below the sliders -->
+					<div id="kickPattern" class="pattern-container"></div>
+				</fieldset>
+
+				<fieldset class="drum">
+					<legend>Snare</legend>
+					<div class="slider-container">
+						<div class="slider-group">
+							<label id="snareGainLabel" for="snareGain">Gain</label>
+							<input type="range" id="snareGain" min="0" max="200" value="8" />
+						</div>
+						<div class="slider-group">
+							<label id="snareStepsLabel" for="snareSteps">Steps</label>
+							<input type="range" id="snareSteps" min="0" max="50" value="8" />
+						</div>
+						<div class="slider-group">
+							<label id="snarePulsesLabel" for="snarePulses">Pulses</label>
+							<input type="range" id="snarePulses" min="0" max="50" value="1" />
+						</div>
+						<div class="slider-group">
+							<label id="snareRotatesLabel" for="snareRotates">Rotate</label>
+							<input type="range" id="snareRotates" min="0" max="50" value="0" />
+						</div>
+					</div>
+					<div id="snarePattern" class="pattern-container"></div>
+				</fieldset>
+
+				<fieldset class="drum">
+					<legend>Hihat</legend>
+					<div class="slider-container">
+						<div class="slider-group">
+							<label id="hihatGainLabel" for="hihatGain">Gain</label>
+							<input type="range" id="hihatGain" min="0" max="200" value="8" />
+						</div>
+						<div class="slider-group">
+							<label id="hihatStepsLabel" for="hihatSteps">Steps</label>
+							<input type="range" id="hihatSteps" min="0" max="50" value="8" />
+						</div>
+						<div class="slider-group">
+							<label id="hihatPulsesLabel" for="hihatPulses">Pulses</label>
+							<input type="range" id="hihatPulses" min="0" max="50" value="1" />
+						</div>
+						<div class="slider-group">
+							<label id="hihatRotatesLabel" for="hihatRotates">Rotate</label>
+							<input type="range" id="hihatRotates" min="0" max="50" value="0" />
+						</div>
+					</div>
+					<div id="hihatPattern" class="pattern-container"></div>
+				</fieldset>
+			</div>
+
+			<!-- Row 2: Sequencer Controls -->
+			<div class="row sequencer-controls">
+				<!-- Cycle Sequencer -->
+				<fieldset class="sequencer">
+					<legend>Cycle Sequencer</legend>
+					<div class="slider-container">
+						<div class="slider-group">
+							<label id="sequencerGainLabel" for="sequencerGain">Sequencer Gain</label>
+							<input type="range" id="sequencerGain" min="0" max="200" value="50" />
+						</div>
+						<div class="slider-group">
+							<label id="attackLabel" for="attack">Attack</label>
+							<input type="range" id="attack" min="-200" max="200" value="0" />
+						</div>
+						<div class="slider-group">
+							<label id="decayLabel" for="decay">Decay</label>
+							<input type="range" id="decay" min="0" max="1000" value="200" />
+						</div>
+						<div class="slider-group">
+							<label id="sustainLabel" for="sustain">Sustain</label>
+							<input type="range" id="sustain" min="0" max="100" value="75" />
+						</div>
+						<div class="slider-group">
+							<label id="phaserFreqLabel" for="phaserFreq">Phaser Frequency</label>
+							<input type="range" id="phaserFreq" min="-50" max="50" value="0" />
+						</div>
+					</div>
+					<div class="number-grid">
+						<div>
+							<label for="num0">1</label
+							><input type="number" id="num0" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num1">2</label
+							><input type="number" id="num1" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num2">3</label
+							><input type="number" id="num2" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num3">4</label
+							><input type="number" id="num3" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num4">5</label
+							><input type="number" id="num4" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num5">6</label
+							><input type="number" id="num5" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num6">7</label
+							><input type="number" id="num6" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num7">8</label
+							><input type="number" id="num7" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num8">9</label
+							><input type="number" id="num8" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num9">10</label
+							><input type="number" id="num9" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num10">11</label
+							><input type="number" id="num10" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num11">12</label
+							><input type="number" id="num11" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num12">13</label
+							><input type="number" id="num12" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num13">14</label
+							><input type="number" id="num13" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num14">15</label
+							><input type="number" id="num14" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="num15">16</label
+							><input type="number" id="num15" class="number-input" value="0" />
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- Sequencer 2 -->
+				<fieldset class="sequencer">
+					<legend>Sequencer 2</legend>
+					<div class="slider-container">
+						<div class="slider-group">
+							<label id="sequencer2GainLabel" for="sequencer2Gain">Sequencer Gain</label>
+							<input type="range" id="sequencer2Gain" min="0" max="200" value="50" />
+						</div>
+						<div class="slider-group">
+							<label id="attack2Label" for="attack2">Attack</label>
+							<input type="range" id="attack2" min="0" max="1000" value="100" />
+						</div>
+						<div class="slider-group">
+							<label id="decay2Label" for="decay2">Decay</label>
+							<input type="range" id="decay2" min="0" max="1000" value="200" />
+						</div>
+						<div class="slider-group">
+							<label id="sustain2Label" for="sustain2">Sustain</label>
+							<input type="range" id="sustain2" min="0" max="100" value="75" />
+						</div>
+					</div>
+					<div class="number-grid">
+						<div>
+							<label for="seq2num0">1</label
+							><input type="number" id="seq2num0" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num1">2</label
+							><input type="number" id="seq2num1" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num2">3</label
+							><input type="number" id="seq2num2" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num3">4</label
+							><input type="number" id="seq2num3" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num4">5</label
+							><input type="number" id="seq2num4" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num5">6</label
+							><input type="number" id="seq2num5" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num6">7</label
+							><input type="number" id="seq2num6" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num7">8</label
+							><input type="number" id="seq2num7" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num8">9</label
+							><input type="number" id="seq2num8" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num9">10</label
+							><input type="number" id="seq2num9" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num10">11</label
+							><input type="number" id="seq2num10" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num11">12</label
+							><input type="number" id="seq2num11" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num12">13</label
+							><input type="number" id="seq2num12" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num13">14</label
+							><input type="number" id="seq2num13" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num14">15</label
+							><input type="number" id="seq2num14" class="number-input" value="0" />
+						</div>
+						<div>
+							<label for="seq2num15">16</label
+							><input type="number" id="seq2num15" class="number-input" value="0" />
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<!-- Script files -->
 		<script type="text/javascript" src="js/rnbo-helpers.js"></script>
 		<script src="js/script.js"></script>
 	</body>

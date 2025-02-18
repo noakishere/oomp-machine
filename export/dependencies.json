@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": "newDrumKick",
+    "file": "media\\kick.wav"
+  },
+  {
+    "id": "newSnare",
+    "file": "media\\snare.wav"
+  },
+  {
+    "id": "hh1",
+    "file": "media\\hihat.wav"
+  },
+  {
+    "id": "piano2",
+    "file": "media\\piano2.wav"
+  },
+  {
+    "id": "piano1",
+    "file": "media\\piano1.wav"
+  },
+  {
+    "id": "piano4",
+    "file": "media\\piano4.wav"
+  },
+  {
+    "id": "piano3",
+    "file": "media\\piano3.wav"
+  }
+]

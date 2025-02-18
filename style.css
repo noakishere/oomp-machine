@@ -1,0 +1,175 @@
+@font-face {
+	font-family: "director";
+	src: url("assets/Steps-Mono-Thin.otf");
+}
+
+body {
+	background: #f0f4f8; /* light pastel background */
+	font-family: "director";
+	color: #333;
+	margin: 0;
+	padding: 20px;
+	text-align: center;
+}
+.container {
+	/* background: #ffffff; */
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.row {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 20px;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
+}
+fieldset {
+	background: #ffffff;
+	border: 2px solid #ff6f61; /* hip coral */
+	border-radius: 10px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+legend {
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #ff6f61; /* hip coral accent */
+	padding: 0 10px;
+}
+
+/* .master .slider-container {
+	width: 100%;
+} */
+
+/* Container for sliders arranged horizontally */
+.slider-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: nowrap;
+}
+.slider-group {
+	margin: 10px;
+}
+.slider-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+/* Horizontal slider styles with custom appearance */
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 150px;
+	height: 8px;
+	border-radius: 5px;
+	background: #26a69a; /* teal track */
+	outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #ff6f61; /* hip coral thumb */
+	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+input[type="range"]::-moz-range-thumb {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #ff6f61;
+	cursor: pointer;
+}
+/* Creative Number Input Styles */
+.number-input {
+	width: 60px;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid #26a69a; /* teal border */
+	border-radius: 5px;
+	text-align: center;
+	font-size: 1em;
+	background: #e0f7fa; /* light cyan */
+	transition: border-color 0.3s;
+}
+.number-input:focus {
+	outline: none;
+	border-color: #ff6f61; /* hip coral on focus */
+}
+/* Layout for number inputs in sequencers */
+.number-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 15px;
+}
+.number-grid div {
+	text-align: center;
+}
+.number-grid label {
+	display: block;
+	font-size: 0.9em;
+}
+/* Fieldset widths for larger screens */
+.drum {
+	width: 220px;
+}
+.sequencer {
+	width: 550px;
+}
+
+/* Circular Pattern Container */
+.pattern-container {
+	position: relative;
+	/* Responsive fixed-size: uses viewport width but limited to max 150px */
+	width: 20vw;
+	height: 20vw;
+	max-width: 150px;
+	max-height: 150px;
+	margin: 10px auto;
+}
+
+/* Pattern circles (displayed as circles) */
+.pattern-square {
+	position: absolute;
+	border-radius: 50%;
+	border: 2px solid #333;
+	transition: background-color 0.3s, transform 0.3s;
+}
+.pattern-square.active {
+	background-color: #ff6f61;
+}
+.pattern-square.inactive {
+	background-color: #ddd;
+}
+
+/* Responsive: adjust pattern container size on small screens */
+@media (max-width: 600px) {
+	.pattern-container {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	.drum,
+	.sequencer {
+		width: 100%;
+	}
+	.slider-container {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	input[type="range"] {
+		width: 100%;
+		max-width: 250px;
+	}
+}
