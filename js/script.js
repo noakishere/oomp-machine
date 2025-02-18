@@ -93,6 +93,29 @@ masterVolumeDOM.addEventListener("input", () => {
 	updateLabels();
 });
 
+const kickPresetInput = document.getElementById("kickPreset");
+if (kickPresetInput) {
+	kickPresetInput.addEventListener("input", () => {
+		sendMessageToInport(device, "kick-preset", kickPresetInput.value);
+	});
+}
+
+// Snare Preset
+const snarePresetInput = document.getElementById("snarePreset");
+if (snarePresetInput) {
+	snarePresetInput.addEventListener("input", () => {
+		sendMessageToInport(device, "snare-preset", snarePresetInput.value);
+	});
+}
+
+// Hihat Preset
+const hihatPresetInput = document.getElementById("hihatPreset");
+if (hihatPresetInput) {
+	hihatPresetInput.addEventListener("input", () => {
+		sendMessageToInport(device, "hihat-preset", hihatPresetInput.value);
+	});
+}
+
 // --- Kick Event Listeners ---
 kickGainDOM.addEventListener("input", () => {
 	sendMessageToInport(device, "kick-gain", kickGainDOM.value);

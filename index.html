@@ -25,6 +25,10 @@
 			<div class="row drum-controls">
 				<fieldset class="drum">
 					<legend>Kick</legend>
+					<div class="preset-selector">
+						<label for="kickPreset">Preset</label>
+						<input type="number" id="kickPreset" min="0" max="3" value="0" />
+					</div>
 					<div class="slider-container">
 						<div class="slider-group">
 							<label id="kickGainLabel" for="kickGain">Gain</label>
@@ -49,6 +53,10 @@
 
 				<fieldset class="drum">
 					<legend>Snare</legend>
+					<div class="preset-selector">
+						<label for="snarePreset">Preset</label>
+						<input type="number" id="snarePreset" min="0" max="3" value="0" />
+					</div>
 					<div class="slider-container">
 						<div class="slider-group">
 							<label id="snareGainLabel" for="snareGain">Gain</label>
@@ -72,6 +80,10 @@
 
 				<fieldset class="drum">
 					<legend>Hihat</legend>
+					<div class="preset-selector">
+						<label for="hihatPreset">Preset</label>
+						<input type="number" id="hihatPreset" min="0" max="3" value="0" />
+					</div>
 					<div class="slider-container">
 						<div class="slider-group">
 							<label id="hihatGainLabel" for="hihatGain">Gain</label>
@@ -191,23 +203,19 @@
 
 				<!-- Sequencer 2 -->
 				<fieldset class="sequencer">
-					<legend>Sequencer 2</legend>
+					<legend>Sample Sequencer</legend>
 					<div class="slider-container">
 						<div class="slider-group">
 							<label id="sequencer2GainLabel" for="sequencer2Gain">Sequencer Gain</label>
 							<input type="range" id="sequencer2Gain" min="0" max="200" value="50" />
 						</div>
 						<div class="slider-group">
-							<label id="attack2Label" for="attack2">Attack</label>
-							<input type="range" id="attack2" min="0" max="1000" value="100" />
+							<label id="reverbSizeLabel" for="reverbSize">Reverb Size</label>
+							<input type="range" id="reverbSize" min="0" max="10" value="0" step="0.1" />
 						</div>
 						<div class="slider-group">
 							<label id="decay2Label" for="decay2">Decay</label>
-							<input type="range" id="decay2" min="0" max="1000" value="200" />
-						</div>
-						<div class="slider-group">
-							<label id="sustain2Label" for="sustain2">Sustain</label>
-							<input type="range" id="sustain2" min="0" max="100" value="75" />
+							<input type="range" id="decay2" min="0" max="2" value="0" step="0.1" />
 						</div>
 					</div>
 					<div class="number-grid">

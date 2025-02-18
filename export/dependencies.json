@@ -26,5 +26,41 @@
   {
     "id": "piano3",
     "file": "media\\piano3.wav"
+  },
+  {
+    "id": "newDK4",
+    "file": "media\\kick4.wav"
+  },
+  {
+    "id": "newDK3",
+    "file": "media\\kick3.wav"
+  },
+  {
+    "id": "newDK2",
+    "file": "media\\kick2.wav"
+  },
+  {
+    "id": "newSnare4",
+    "file": "media\\snare4.wav"
+  },
+  {
+    "id": "newSnare3",
+    "file": "media\\snare3.wav"
+  },
+  {
+    "id": "newSnare2",
+    "file": "media\\snare2.wav"
+  },
+  {
+    "id": "nhh4",
+    "file": "media\\hihat4.wav"
+  },
+  {
+    "id": "nhh3",
+    "file": "media\\hihat3.wav"
+  },
+  {
+    "id": "nhh2",
+    "file": "media\\hihat2.wav"
   }
 ]
