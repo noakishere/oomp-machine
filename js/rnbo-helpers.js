@@ -172,6 +172,10 @@ function sendMessageToInport(device, inportTag, values) {
 	device.scheduleEvent(messageEvent);
 }
 
+let kickPattern;
+let snarePattern;
+let hihatPattern;
+
 function attachOutports(device) {
 	const outports = device.outports;
 	console.log(`OUTPORTS ${outports}`);
@@ -192,16 +196,19 @@ function attachOutports(device) {
 
 		if (ev.tag == "kick-pattern") {
 			console.log(ev.payload);
+			kickPattern = ev.payload;
 			updatePattern("kick", ev.payload);
 		}
 
 		if (ev.tag == "snare-pattern") {
 			console.log(ev.payload);
+			snarePattern = ev.payload;
 			updatePattern("snare", ev.payload);
 		}
 
 		if (ev.tag == "hihat-pattern") {
 			console.log(ev.payload);
+			hihatPattern = ev.payload;
 			updatePattern("hihat", ev.payload);
 		}
 

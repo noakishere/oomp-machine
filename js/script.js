@@ -65,7 +65,7 @@ const sustain2Label = document.getElementById("sustain2Label");
 async function loadRNBO() {
 	[device, context] = await createRNBODevice(patchExportURL);
 	console.log("RNBO Device Loaded");
-	console.log(` MESSAGES ${device.messages}`);
+	// console.log(` MESSAGES ${device.messages}`);
 }
 
 loadRNBO();

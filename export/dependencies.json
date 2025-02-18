@@ -12,22 +12,6 @@
     "file": "media\\hihat.wav"
   },
   {
-    "id": "piano2",
-    "file": "media\\piano2.wav"
-  },
-  {
-    "id": "piano1",
-    "file": "media\\piano1.wav"
-  },
-  {
-    "id": "piano4",
-    "file": "media\\piano4.wav"
-  },
-  {
-    "id": "piano3",
-    "file": "media\\piano3.wav"
-  },
-  {
     "id": "newDK4",
     "file": "media\\kick4.wav"
   },
@@ -38,6 +22,18 @@
   {
     "id": "newDK2",
     "file": "media\\kick2.wav"
+  },
+  {
+    "id": "seq3",
+    "file": "media\\seq3.wav"
+  },
+  {
+    "id": "seq2",
+    "file": "media\\seq2.wav"
+  },
+  {
+    "id": "seq1",
+    "file": "media\\seq1.wav"
   },
   {
     "id": "newSnare4",
@@ -62,5 +58,33 @@
   {
     "id": "nhh2",
     "file": "media\\hihat2.wav"
+  },
+  {
+    "id": "seq5",
+    "file": "media\\seq5.wav"
+  },
+  {
+    "id": "seq4",
+    "file": "media\\seq4.wav"
+  },
+  {
+    "id": "seq10",
+    "file": "media\\seq10.wav"
+  },
+  {
+    "id": "seq6",
+    "file": "media\\seq6.wav"
+  },
+  {
+    "id": "seq9",
+    "file": "media\\seq9.wav"
+  },
+  {
+    "id": "seq8",
+    "file": "media\\seq8.wav"
+  },
+  {
+    "id": "seq7",
+    "file": "media\\seq7.wav"
   }
 ]
