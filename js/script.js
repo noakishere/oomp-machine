@@ -232,3 +232,49 @@ function updatePattern(instrument, patternArray) {
 		container.appendChild(circle);
 	});
 }
+
+// -- SEQUENCERS
+
+function updateSequencer1Pattern() {
+	// Select all inputs within the first sequencer's number grid that start with "num"
+	const inputs = document.querySelectorAll(
+		"fieldset.sequencer .number-grid input.number-input[id^='num']"
+	);
+	// Bundle all values into one space-separated string
+	const valueString = Array.from(inputs)
+		.map((input) => input.value)
+		.join(" ");
+	// Send the bundled string to the RNBO inport (update the tag as needed)
+	sendMessageToInport(device, "sequencer-pattern", valueString);
+}
+
+function updateSequencer2Pattern() {
+	// Select all inputs within the second sequencer's number grid that start with "seq2"
+	const inputs = document.querySelectorAll(
+		"fieldset.sequencer .number-grid input.number-input[id^='seq2']"
+	);
+	// Bundle all values into one space-separated string
+	const valueString = Array.from(inputs)
+		.map((input) => input.value)
+		.join(" ");
+	// Send the bundled string to the RNBO inport (update the tag as needed)
+	sendMessageToInport(device, "sequencer2-pattern", valueString);
+}
+
+const seq1Inputs = document.querySelectorAll(
+	"fieldset.sequencer .number-grid input.number-input[id^='num']"
+);
+
+seq1Inputs.forEach((input) => {
+	input.addEventListener("input", updateSequencer1Pattern);
+});
+
+const seq2Inputs = document.querySelectorAll(
+	"fieldset.sequencer .number-grid input.number-input[id^='seq2']"
+);
+seq2Inputs.forEach((input) => {
+	input.addEventListener("input", updateSequencer2Pattern);
+});
+
+updateSequencer1Pattern();
+updateSequencer2Pattern();

@@ -205,6 +205,11 @@ function attachOutports(device) {
 			updatePattern("hihat", ev.payload);
 		}
 
+		if (ev.tag == "seq-pat") {
+			console.log(ev.payload);
+			// updatePattern("hihat", ev.payload);
+		}
+
 		// console.log(`${ev.tag}: ${ev.payload}`);
 		// console.log(ev);
 		// document.getElementById("rnbo-console-readout").innerText = `${ev.tag}: ${ev.payload}`;
