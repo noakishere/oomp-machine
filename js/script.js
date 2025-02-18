@@ -52,15 +52,13 @@ const phaserFreqLabel = document.getElementById("phaserFreqLabel");
 
 // Select slider DOM elements for Cycle Sequencer 2
 const sequencer2GainDOM = document.getElementById("sequencer2Gain");
-const attack2DOM = document.getElementById("attack2");
+const seq2ReverbSize = document.getElementById("reverbSize");
 const decay2DOM = document.getElementById("decay2");
-const sustain2DOM = document.getElementById("sustain2");
 
 // Select label elements for Cycle Sequencer 2
 const sequencer2GainLabel = document.getElementById("sequencer2GainLabel");
-const attack2Label = document.getElementById("attack2Label");
+const seq2reverbSizeLabel = document.getElementById("reverbSizeLabel");
 const decay2Label = document.getElementById("decay2Label");
-const sustain2Label = document.getElementById("sustain2Label");
 
 async function loadRNBO() {
 	[device, context] = await createRNBODevice(patchExportURL);
@@ -212,6 +210,16 @@ phaserFreqDOM.addEventListener("input", () => {
 sequencer2GainDOM.addEventListener("input", () => {
 	sequencer2GainLabel.innerHTML = `Sequencer Gain: ${sequencer2GainDOM.value}`;
 	sendMessageToInport(device, "sequencer2-gain", sequencer2GainDOM.value);
+});
+
+seq2ReverbSize.addEventListener("input", () => {
+	sequencer2GainLabel.innerHTML = `Reverb: ${sequencer2GainDOM.value}`;
+	sendMessageToInport(device, "reverb-power", sequencer2GainDOM.value);
+});
+
+decay2DOM.addEventListener("input", () => {
+	sequencer2GainLabel.innerHTML = `Decay: ${sequencer2GainDOM.value}`;
+	sendMessageToInport(device, "reverbMultiplier", sequencer2GainDOM.value);
 });
 
 // PATTERNS
